@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      .app-button {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px #73d06297;
+        margin-bottom: 10px;
+      }
+
+      .app-button:hover {
+        background-color: #45a049;
+      }
+
+      .app-button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #4b5c4886;
+        transform: translateY(4px);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>SK Deep Link Button</h2>
+    </div>
+
+    <button class="app-button" onclick="openApp('stickydev:wc?uri=123')">
+      Open SK Dev App
+    </button>
+    <button class="app-button" onclick="openApp('stickystaging:wc?uri=123')">
+      Open SK Staging App
+    </button>
+    <button class="app-button" onclick="openApp('stickyapp:wc?uri=123')">
+      Open SK App
+    </button>
+
+    <script>
+      function openApp(deeplink) {
+        // your deep link url
+
+        // Open the app using the deep link
+        window.location.href = deeplink;
+      }
+    </script>
+  </body>
+</html>
